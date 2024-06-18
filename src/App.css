@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+/* styles/globals.css */
+
+.video-player-wrapper {
+  position: relative;
+}
+
+.transcript {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.transcript span {
+  cursor: pointer;
+}
+
+.transcript span.highlighted {
+  background-color: yellow;
+}
+.transcript-overlay {
+  position: absolute;
+  bottom: 10px; /* Adjust as per your design */
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none; /* Ensure clicks pass through to video controls */
+}
+
+.transcript-text {
+  display: none;
+  padding: 8px;
+  /*background-color: rgba(0, 0, 0, 0.5);*/
+  color: white;
+  border-radius: 5px;
+  pointer-events: auto; /* Enable clicks within transcript text */
+}
+
+.transcript-text.active {
+  display: block;
+}
